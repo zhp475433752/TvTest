@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../.gradle/caches/transforms-3/3d4103384cc0460a7c63f5c42b27e3e1/transformed/leanback-1.0.0/res/drawable/lb_background.xml" value="0.42043721403152007" />
+        <entry key="../../../../../.gradle/caches/transforms-3/3d4103384cc0460a7c63f5c42b27e3e1/transformed/leanback-1.0.0/res/drawable/lb_card_foreground.xml" value="0.42043721403152007" />
+        <entry key="../../../../../.gradle/caches/transforms-3/3d4103384cc0460a7c63f5c42b27e3e1/transformed/leanback-1.0.0/res/drawable/lb_control_button_primary.xml" value="0.42043721403152007" />
+        <entry key="../../../../../.gradle/caches/transforms-3/3d4103384cc0460a7c63f5c42b27e3e1/transformed/leanback-1.0.0/res/drawable/lb_control_button_secondary.xml" value="0.42043721403152007" />
+        <entry key="../../../../../.gradle/caches/transforms-3/3d4103384cc0460a7c63f5c42b27e3e1/transformed/leanback-1.0.0/res/drawable/lb_headers_right_fading.xml" value="0.42043721403152007" />
+        <entry key="../../../../../.gradle/caches/transforms-3/3d4103384cc0460a7c63f5c42b27e3e1/transformed/leanback-1.0.0/res/drawable/lb_onboarding_start_button_background.xml" value="0.42043721403152007" />
+        <entry key="../../../../../.gradle/caches/transforms-3/3d4103384cc0460a7c63f5c42b27e3e1/transformed/leanback-1.0.0/res/drawable/lb_playback_now_playing_bar.xml" value="0.42043721403152007" />
+        <entry key="../../../../../.gradle/caches/transforms-3/3d4103384cc0460a7c63f5c42b27e3e1/transformed/leanback-1.0.0/res/drawable/lb_playback_progress_bar.xml" value="0.42043721403152007" />
+        <entry key="../../../../../.gradle/caches/transforms-3/3d4103384cc0460a7c63f5c42b27e3e1/transformed/leanback-1.0.0/res/drawable/lb_search_orb.xml" value="0.42043721403152007" />
+        <entry key="../../../../../.gradle/caches/transforms-3/3d4103384cc0460a7c63f5c42b27e3e1/transformed/leanback-1.0.0/res/drawable/lb_speech_orb.xml" value="0.42043721403152007" />
+        <entry key="../../../../../.gradle/caches/transforms-3/3d4103384cc0460a7c63f5c42b27e3e1/transformed/leanback-1.0.0/res/layout/lb_image_card_view.xml" value="0.333786231884058" />
+        <entry key="app/src/main/res/drawable/default_background.xml" value="0.49771225216065074" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.48489583333333336" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3695652173913043" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14_PREVIEW" project-jdk-name="14" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
