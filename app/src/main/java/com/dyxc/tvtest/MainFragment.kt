@@ -152,7 +152,7 @@ class MainFragment : BrowseSupportFragment() {
                     startActivity(intent)
                 } else if (item.contains(getString(R.string.grid_view))) {
                     //启动自定义页面
-
+                    startActivity(Intent(requireContext(), DbjMainActivity::class.java))
                 } else {
                     Toast.makeText(activity!!, item, Toast.LENGTH_SHORT).show()
                 }
