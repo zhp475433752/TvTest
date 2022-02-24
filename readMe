@@ -1,0 +1,12 @@
+
+开发参考：
+https://github.com/android/tv-samples
+Leanback
+LeanbackShowcase（比较新）
+
+1.项目说明
+    该项目是用AS新建的Tv应用
+
+2.自定义页面
+DbjMainActivity实现了网格视图
+PlaybackActivity增加了快进快退功能

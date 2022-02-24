@@ -1,16 +1,14 @@
-package com.dyxc.tvtest
+package com.dyxc.tvtest.gridview
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
 
-/** Loads [PlaybackVideoFragment]. */
-class PlaybackActivity : FragmentActivity() {
-
+class DbjMainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(android.R.id.content, PlaybackVideoFragment())
+                .replace(android.R.id.content, DbjFragment())
                 .commit()
         }
     }

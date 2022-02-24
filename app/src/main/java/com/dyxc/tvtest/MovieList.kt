@@ -17,19 +17,14 @@ object MovieList {
 
     private fun setupMovies(): List<Movie> {
         val title = arrayOf(
-            "Zeitgeist 2010_ Year in Review",
+            "窦老师带你了解豆伴匠",
             "Google Demo Slam_ 20ft Search",
             "Introducing Gmail Blue",
             "Introducing Google Fiber to the Pole",
             "Introducing Google Nose"
         )
 
-        val description = "Fusce id nisi turpis. Praesent viverra bibendum semper. " +
-                "Donec tristique, orci sed semper lacinia, quam erat rhoncus massa, non congue tellus est " +
-                "quis tellus. Sed mollis orci venenatis quam scelerisque accumsan. Curabitur a massa sit " +
-                "amet mi accumsan mollis sed et magna. Vivamus sed aliquam risus. Nulla eget dolor in elit " +
-                "facilisis mattis. Ut aliquet luctus lacus. Phasellus nec commodo erat. Praesent tempus id " +
-                "lectus ac scelerisque. Maecenas pretium cursus lectus id volutpat."
+        val description = "窦老师带你了解豆伴匠---大唐奇闻录-01"
         val studio = arrayOf(
             "Studio Zero",
             "Studio One",
@@ -38,11 +33,11 @@ object MovieList {
             "Studio Four"
         )
         val videoUrl = arrayOf(
-            "https://commondatastorage.googleapis.com/android-tv/Sample%20videos/Zeitgeist/Zeitgeist%202010_%20Year%20in%20Review.mp4",
-            "http://vfx.mtime.cn/Video/2019/03/17/mp4/190317150237409904.mp4",
-            "http://vfx.mtime.cn/Video/2019/03/14/mp4/190314223540373995.mp4",
-            "http://vfx.mtime.cn/Video/2019/03/14/mp4/190314102306987969.mp4",
-            "http://vfx.mtime.cn/Video/2019/03/12/mp4/190312143927981075.mp4"
+            "https://vod.douyuxingchen.com/6057e0cbvodtransbj1306665185/847f69ee3701925924906167486/v.f100830.mp4",
+            "https://vod.douyuxingchen.com/6057e0cbvodtransbj1306665185/847f69ee3701925924906167486/v.f100830.mp4",
+            "https://vod.douyuxingchen.com/6057e0cbvodtransbj1306665185/847f69ee3701925924906167486/v.f100830.mp4",
+            "https://vod.douyuxingchen.com/6057e0cbvodtransbj1306665185/847f69ee3701925924906167486/v.f100830.mp4",
+            "https://vod.douyuxingchen.com/6057e0cbvodtransbj1306665185/847f69ee3701925924906167486/v.f100830.mp4"
         )
         val bgImageUrl = arrayOf(
             "https://c-ssl.duitang.com/uploads/item/201802/06/20180206165118_WL4Hm.thumb.1000_0.jpeg",

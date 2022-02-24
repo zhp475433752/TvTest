@@ -19,7 +19,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TvTest">
         <activity
-            android:name=".DbjMainActivity"
+            android:name=".video.exo.ExoPlayerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".gridview.DbjMainActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
@@ -39,8 +42,11 @@
             android:name=".DetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".PlaybackActivity"
-            android:exported="false" />
+            android:name=".video.ui.PlaybackActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:resizeableActivity="true" />
         <activity
             android:name=".BrowseErrorActivity"
             android:exported="false" />
