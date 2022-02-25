@@ -23,6 +23,7 @@
         android:theme="@style/Theme.TvTest">
         <activity
             android:name=".video.exo.ExoPlayerActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
             android:exported="true" />
         <activity
             android:name=".gridview.DbjMainActivity"

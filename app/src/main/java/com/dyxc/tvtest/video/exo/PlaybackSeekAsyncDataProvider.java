@@ -69,9 +69,10 @@ public abstract class PlaybackSeekAsyncDataProvider extends PlaybackSeekDataProv
 
         @Override
         protected void onPostExecute(Bitmap bitmap) {
-            if (bitmap == null) return;
             mRequests.remove(mIndex);
-            Log.d(TAG, "thumb Loaded " + mIndex);
+            if (bitmap == null) return;
+//            Log.d(TAG, "thumb Loaded " + mIndex);
+            Log.e("--获取视频帧--", "后台执行完成---"+mIndex);
             if (mResultCallback != null) {
                 mCache.put(mIndex, bitmap);
                 mResultCallback.onThumbnailLoaded(bitmap, mIndex);
@@ -102,13 +103,16 @@ public abstract class PlaybackSeekAsyncDataProvider extends PlaybackSeekDataProv
 
     @Override
     public void getThumbnail(int index, ResultCallback callback) {
+//        Log.e("--获取视频帧--", "快进按下 - 开始获取---"+index );
         Integer key = index;
         Bitmap bitmap = mCache.get(key);
         if (bitmap != null) {
+            Log.e("--获取视频帧--", "内存有图片---"+index );
             callback.onThumbnailLoaded(bitmap, index);
         } else {
             bitmap = mPrefetchCache.get(key);
             if (bitmap != null) {
+                Log.e("--获取视频帧--", "内存有图片--提前加载的--"+index );
                 mCache.put(key, bitmap);
                 mPrefetchCache.remove(key);
                 callback.onThumbnailLoaded(bitmap, index);
