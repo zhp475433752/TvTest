@@ -10,6 +10,8 @@ import androidx.leanback.widget.Presenter
 import com.bumptech.glide.Glide
 import com.dyxc.tvtest.R
 import com.dyxc.tvtest.video.exo.ExoPlayerActivity
+import java.lang.Exception
+import java.security.MessageDigest
 
 /**
  * Created by zhanghuipeng on 2022/2/22.
@@ -30,7 +32,7 @@ class TPresenter: Presenter() {
                 viewHolder.view?.setOnClickListener {
                     val intent = Intent(imageView.context, ExoPlayerActivity::class.java)
                     intent.putExtra("url", item.videoUrl)
-                    intent.putExtra("id", "01")
+                    intent.putExtra("id", transformMD5(item.videoUrl))
                     imageView.context.startActivity(intent)
                     Toast.makeText(imageView.context!!, "点击了 --- ${item.title}", Toast.LENGTH_SHORT).show()
                 }
@@ -40,5 +42,38 @@ class TPresenter: Presenter() {
 
     override fun onUnbindViewHolder(viewHolder: ViewHolder?) {
 
+    }
+
+    /**
+     * @param inputStr
+     * @return 32位的MD5数
+     */
+    private fun transformMD5(inputStr: String): String? {
+        var md5: MessageDigest? = null
+        md5 = try {
+            MessageDigest.getInstance("MD5")
+        } catch (e: Exception) {
+            println(e.toString())
+            return null
+        }
+        val charArray = inputStr.toCharArray() //将字符串转换为字符数组
+        val byteArray = ByteArray(charArray.size) //创建字节数组
+        for (i in charArray.indices) {
+            byteArray[i] = charArray[i].toByte()
+        }
+
+        //将得到的字节数组进行MD5运算
+        val md5Bytes: ByteArray = md5!!.digest(byteArray)
+        val md5Str = StringBuffer()
+        for (i in md5Bytes.indices) {
+            if (Integer.toHexString(0xFF and md5Bytes[i].toInt()).length == 1) md5Str.append("0")
+                .append(
+                    Integer.toHexString(
+                        0xFF and md5Bytes[i]
+                            .toInt()
+                    )
+                ) else md5Str.append(Integer.toHexString(0xFF and md5Bytes[i].toInt()))
+        }
+        return md5Str.toString()
     }
 }
