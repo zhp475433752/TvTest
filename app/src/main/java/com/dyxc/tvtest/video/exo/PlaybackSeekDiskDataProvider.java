@@ -54,7 +54,7 @@ public class PlaybackSeekDiskDataProvider extends PlaybackSeekAsyncDataProvider 
     //视频帧高度
     private final int FRAME_HEIGHT = 90;
     //视频帧图片本地缓存压缩质量[0, 100]
-    private final int FRAME_COMPRESS_QUALITY = 80;
+    private final int FRAME_COMPRESS_QUALITY = 100;
 
     PlaybackSeekDiskDataProvider(String url, long duration, long interval, String path, String name) {
         mVideoUrl = url;
@@ -83,6 +83,10 @@ public class PlaybackSeekDiskDataProvider extends PlaybackSeekAsyncDataProvider 
         fFmpegMediaMetadataRetriever.extractMetadata(FFmpegMediaMetadataRetriever.METADATA_KEY_ALBUM);
         fFmpegMediaMetadataRetriever.extractMetadata(FFmpegMediaMetadataRetriever.METADATA_KEY_ARTIST);
 
+        // 提前加载部分预览帧
+        for (int k = 0; k < FRAME_COUNT / 2; k++) {
+            prefetch(k, true);
+        }
     }
 
     protected Bitmap doInBackground(Object task, int index, long positionMs) {
@@ -102,13 +106,6 @@ public class PlaybackSeekDiskDataProvider extends PlaybackSeekAsyncDataProvider 
             Log.e("--获取视频帧--", "图片在Disk存在 - index - " + index );
             return BitmapFactory.decodeFile(pathName);
         } else {
-//            Bitmap bmp = Bitmap.createBitmap(160, 160, Bitmap.Config.RGB_565);
-//            Canvas canvas = new Canvas(bmp);
-//            canvas.drawColor(Color.YELLOW);
-//            canvas.drawText(path, 10, 80, mPaint);
-//            canvas.drawText(Integer.toString(index), 10, 150, mPaint);
-//            Bitmap videoFrame = getVideoFrame(positionMs * 1000);
-
             return getVideoFrame(positionMs * 1000, index);//参数为微秒
         }
     }
@@ -180,7 +177,7 @@ public class PlaybackSeekDiskDataProvider extends PlaybackSeekAsyncDataProvider 
                 Log.e("--获取视频帧--", "保存图片异常 - IOException - "+e.getMessage());
             }
         }
-//        Log.d("size", "bitmap视频帧大小 - "+bitmap.getWidth() + " - "+bitmap.getHeight());
+        Log.d("--获取视频帧--", "bitmap视频帧大小 getByteCount - "+bitmap.getByteCount());
         return bitmap;
     }
 
