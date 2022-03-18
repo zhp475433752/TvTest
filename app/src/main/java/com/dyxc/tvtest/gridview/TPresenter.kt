@@ -10,7 +10,6 @@ import androidx.leanback.widget.Presenter
 import com.bumptech.glide.Glide
 import com.dyxc.tvtest.R
 import com.dyxc.tvtest.video.exo.ExoPlayerActivity
-import java.lang.Exception
 import java.security.MessageDigest
 
 /**
