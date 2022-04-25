@@ -12,11 +12,11 @@ import com.dyxc.tvtest.R
 /**
  * Created by zhanghuipeng on 2022/2/15.
  */
-class CustomFragment: Fragment(), View.OnFocusChangeListener {
+class CustomFragment: Fragment() {
     private val TAG = "DbjFragment"
-    lateinit var image1: FrameLayout
-    lateinit var image2: FrameLayout
-    lateinit var image3: FrameLayout
+    lateinit var image1: BesTvFrameLayout
+    lateinit var image2: BesTvFrameLayout
+    lateinit var image3: BesTvFrameLayout
 
 
     override fun onCreateView(
@@ -37,19 +37,7 @@ class CustomFragment: Fragment(), View.OnFocusChangeListener {
         image1 = root.findViewById(R.id.image1)
         image2 = root.findViewById(R.id.image2)
         image3 = root.findViewById(R.id.image3)
-        image1.onFocusChangeListener = this
-        image2.onFocusChangeListener = this
-        image3.onFocusChangeListener = this
         image1.requestFocus()
     }
-
-    override fun onFocusChange(v: View?, hasFocus: Boolean) {
-        if (hasFocus) {
-            ViewCompat.animate(v!!).scaleX(1.18f).scaleY(1.18f).translationZ(1f).start()
-        } else {
-            ViewCompat.animate(v!!).scaleX(1f).scaleY(1f).translationZ(1f).start()
-        }
-    }
-
 }
 

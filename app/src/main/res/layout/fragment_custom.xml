@@ -7,53 +7,79 @@
     android:background="@android:color/black"
     android:orientation="horizontal">
 
-    <FrameLayout
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/image1"-->
+    <!--        android:layout_margin="20dp"-->
+    <!--        android:focusable="true"-->
+    <!--        android:focusableInTouchMode="true"-->
+    <!--        android:background="@drawable/bg_custom_selector"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content">-->
+    <!--        <ImageView-->
+    <!--            android:src="@drawable/app_icon_your_company"-->
+    <!--            android:scaleType="centerCrop"-->
+    <!--            android:layout_margin="5dp"-->
+    <!--            android:layout_width="200dp"-->
+    <!--            android:layout_height="200dp" />-->
+    <!--    </FrameLayout>-->
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/image2"-->
+    <!--        android:layout_margin="20dp"-->
+    <!--        android:focusable="true"-->
+    <!--        android:focusableInTouchMode="true"-->
+    <!--        android:background="@drawable/bg_custom_selector"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content">-->
+    <!--        <ImageView-->
+    <!--            android:src="@drawable/app_icon_your_company"-->
+    <!--            android:scaleType="centerCrop"-->
+    <!--            android:layout_margin="5dp"-->
+    <!--            android:layout_width="200dp"-->
+    <!--            android:layout_height="200dp" />-->
+    <!--    </FrameLayout>-->
+
+
+    <com.dyxc.tvtest.custom.BesTvFrameLayout
         android:id="@+id/image1"
-        android:layout_margin="20dp"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:background="@drawable/bg_custom_selector"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:src="@drawable/app_icon_your_company"
-            android:scaleType="centerCrop"
-            android:layout_margin="5dp"
-            android:layout_width="200dp"
-            android:layout_height="200dp" />
-    </FrameLayout>
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
 
-    <FrameLayout
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_icon_your_company" />
+    </com.dyxc.tvtest.custom.BesTvFrameLayout>
+
+    <com.dyxc.tvtest.custom.BesTvFrameLayout
         android:id="@+id/image2"
-        android:layout_margin="20dp"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:background="@drawable/bg_custom_selector"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
         <ImageView
-            android:src="@drawable/app_icon_your_company"
-            android:scaleType="centerCrop"
-            android:layout_margin="5dp"
             android:layout_width="200dp"
-            android:layout_height="200dp" />
-    </FrameLayout>
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_icon_your_company" />
+    </com.dyxc.tvtest.custom.BesTvFrameLayout>
 
-
-    <FrameLayout
+    <com.dyxc.tvtest.custom.BesTvFrameLayout
         android:id="@+id/image3"
-        android:layout_margin="20dp"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:background="@drawable/bg_custom_selector"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
         <ImageView
-            android:src="@drawable/app_icon_your_company"
-            android:scaleType="centerCrop"
-            android:layout_margin="5dp"
             android:layout_width="200dp"
-            android:layout_height="200dp" />
-    </FrameLayout>
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_icon_your_company" />
+    </com.dyxc.tvtest.custom.BesTvFrameLayout>
 
 </LinearLayout>
