@@ -39,9 +39,9 @@ class DbjFragment: Fragment() {
         val url2 = "https://tenfei05.cfp.cn/creative/vcg/veer/800/new/VCG41N177546665.jpg"
         val url3 = "https://tenfei02.cfp.cn/creative/vcg/veer/1600water/veer-320732696.jpg"
 
-        val v1 = "https://vod.douyuxingchen.com/6057e0cbvodtransbj1306665185/847f69ee3701925924906167486/v.f100830.mp4"
-        val v2 = "https://vod.douyuxingchen.com/6057e0cbvodtransbj1306665185/96f9b9d7387702293320683496/v.f100830.mp4"
-        val v3 = "https://vod.douyuxingchen.com/6057e0cbvodtransbj1306665185/ceaa3f71387702293277140275/v.f100830.mp4"
+        val v1 = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+        val v2 = "https://media.w3.org/2010/05/sintel/trailer.mp4"
+        val v3 = "http://vfx.mtime.cn/Video/2021/07/09/mp4/210709172715355157.mp4"
 
         for (i in 0..50) {
             var url = url1
